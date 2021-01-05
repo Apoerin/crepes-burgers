@@ -1,0 +1,105 @@
+@media only screen and (min-width: 1024px) and (max-width: 1400px){
+    .nav-mobile {
+        display: none;
+    }
+    .details .wrapper {
+        padding: 20px 0;
+    }
+    .details-text p {
+        width: 85%;
+        padding: 0 0 0 50px;
+    }
+    .address .info-wrapper {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .header-nav {
+        display: none;
+    }
+    .nav-mobile {
+        width: 80%;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .nav-mobile img {
+        width: 120px;
+    }
+    .nav-mobile .open-menu, .nav-mobile .close-menu {
+        font-size: 30px;
+        color: #fffbf9;
+    }
+    .nav-mobile .mobile-menu {
+        margin: auto 0;
+    }
+    .parallax {
+        width: 100%;
+        height: auto;
+    }
+    .img-wrapper {
+        margin: auto;
+    }
+    .details .wrapper {
+        padding: 20px 0;
+    }
+    .details-text p {
+        width: 85%;
+        padding: 0 0 0 50px;
+    }
+    .address .info-wrapper {
+        width: 90%;
+    }
+    .address .info-wrapper p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .header-nav {
+        display: none;
+    }
+    .nav-mobile {
+        width: 80%;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .nav-mobile img {
+        width: 120px;
+    }
+    .nav-mobile .open-menu, .nav-mobile .close-menu {
+        font-size: 30px;
+        color: #fffbf9;
+    }
+    .nav-mobile .mobile-menu {
+        margin: auto 0;
+    }
+    .parallax {
+        width: 100%;
+        height: auto;
+    }
+    .img-wrapper {
+        margin: auto;
+    }
+    .details .wrapper {
+        padding: 20px 0;
+    }
+    .details-text p {
+        width: 85%;
+        padding: 0 0 0 50px;
+    }
+    .address .info-wrapper {
+        width: 80%;
+        height: auto;
+        top: -580px;
+        display: block;
+    }
+    .address .info-wrapper p {
+        font-size: 22px;
+        text-align: center;
+    }
+}
