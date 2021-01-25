@@ -1,22 +1,25 @@
 import React from "react";
-import Header from './components/Header';
-import About from './components/About';
-import Gallery from './components/Gallery';
-import Address from "./components/Address";
-import Menu from "./components/Menu";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
+
 import './App.css';
 import './Responsive.css';
 
 function App() {
   return (
       <>
-      <Header/>
-      <About/>
-      <Gallery/>
-      <Address/>
-      <Menu/>
-      <Footer/>
+      <Header />
+      <Router>
+        <Switch>
+        <Route exact path="/home" component={Home} />
+        <Route path="/menu" component={Menu} />
+        </Switch>
+      </Router>
+      <Footer />
       </>
   );
 }

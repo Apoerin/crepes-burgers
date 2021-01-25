@@ -28,7 +28,7 @@
     .nav-mobile img {
         width: 120px;
     }
-    .nav-mobile .open-menu, .nav-mobile .close-menu {
+    .mobile-menu .open-menu, .mobile-menu .close-menu {
         font-size: 30px;
         color: #fffbf9;
     }
@@ -40,14 +40,24 @@
         height: auto;
     }
     .img-wrapper {
+        display: flex;
         margin: auto;
     }
     .details .wrapper {
+        width: 85%;
+        display: block;
+        padding: 20px 0;
+    }
+    .reverse-wrapper {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        flex-direction: column-reverse;
         padding: 20px 0;
     }
     .details-text p {
-        width: 85%;
-        padding: 0 0 0 50px;
+        width: 100%;
+        padding: 0;
     }
     .address .info-wrapper {
         width: 90%;
@@ -83,14 +93,27 @@
         height: auto;
     }
     .img-wrapper {
+        display: flex;
         margin: auto;
     }
+    .preview {
+        width: 250px;
+    }
     .details .wrapper {
+        width: 85%;
+        display: block;
+        padding: 20px 0;
+    }
+    .reverse-wrapper {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
         padding: 20px 0;
     }
     .details-text p {
-        width: 85%;
-        padding: 0 0 0 50px;
+        width: 100%;
+        padding: 0;
     }
     .address .info-wrapper {
         width: 80%;

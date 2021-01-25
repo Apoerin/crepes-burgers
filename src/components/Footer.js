@@ -5,7 +5,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 
 library.add(fab)
 
-function Footer() {
+const Footer = () => {
     return (
         <footer>
             <div className="socials">

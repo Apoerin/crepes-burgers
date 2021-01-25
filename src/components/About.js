@@ -1,13 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-//import { Parallax } from "react-parallax";
 
 import burger_parallax from '../images/burger_parallax.jpg';
 import burger_preview from '../images/burger_preview.jpg';
 import salmon_crepe from '../images/salmon_crepe.jpg';
 import for_seasonal from '../images/for_seasonal.jpg';
 
-function About() {
+const About = () => {
     const [offset, setOffset] = useState(0);
 
     useEffect(() => {
@@ -21,14 +20,6 @@ function About() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [offset]);
-
-                        /*<Parallax
-                bgImage={burger_parallax}
-                strength={500}
-                className="intro">
-                <div className="headline">This is your burger</div>
-            </Parallax>
-    */
 
     return (
         <>
@@ -46,7 +37,7 @@ function About() {
                     <h2 className="headline">this is your burger</h2>
                 </div>
             </section>
-            <section className="details">
+            <section className="details" id="about">
                 <h3>Enjoy every bite</h3>
                     <div className="wrapper">
                         <div className="img-wrapper">
@@ -59,7 +50,7 @@ function About() {
                             cheese to give you new experience.</p>
                         </div>
                     </div>
-                    <div className="wrapper">
+                    <div className="reverse-wrapper">
                         <div className="details-text">
                             <h4>Fresh herbs, vegetables and fruits</h4>
                             <p>We use only fresh veggies, fruits and herbs. We support small local businesses by buying

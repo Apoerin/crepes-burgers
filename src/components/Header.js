@@ -6,20 +6,20 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fas);
 
-function Header()  {
+const Header = () =>  {
     return (
         <header>
         <nav className="header-nav">
-            <a href="#home"><img src={logo} alt="Crepes&Burgers"/></a>
+            <a href="/home"><img src={logo} alt="Crepes&Burgers"/></a>
             <ul>
                 <li>
                     <a href="/home">Home</a>
                 </li>
                 <li>
-                    <a href="/about">About</a>
+                    <a href="/home">About</a>
                 </li>
                 <li>
-                    <a href="/address">Where&When</a>
+                    <a href="/home">Where&When</a>
                 </li>
                 <li>
                     <a href="/menu">Menu</a>
@@ -28,7 +28,23 @@ function Header()  {
         </nav>
             <div className="nav-mobile">
                 <div className="logo">
-                    <a href="#home"><img src={logo} alt="Crepes&Burgers"/></a>
+                    <a href="/home"><img src={logo} alt="Crepes&Burgers"/></a>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="/home">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/address">Where&When</a>
+                        </li>
+                        <li>
+                            <a href="/menu">Menu</a>
+                        </li>
+                    </ul>
                 </div>
                 <div className="mobile-menu">
                     <FontAwesomeIcon className="open-menu" icon={["fas", "bars"]}/>

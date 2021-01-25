@@ -1,16 +1,16 @@
 import * as  React from "react";
 import { useGoogleMaps } from "react-hook-google-maps";
 
-function Address() {
-const { ref } = useGoogleMaps(
-    "AIzaSyD0yDBj2-SR97wS1cxBZ3KOaC-cevCVR7s",
-    {
-        center: { lat: 52.236710, lng: 21.017521},
-        zoom: 14
-    });
+const Address = () => {
+    const { ref } = useGoogleMaps(
+        "AIzaSyD0yDBj2-SR97wS1cxBZ3KOaC-cevCVR7s",
+        {
+            center: { lat: 52.236710, lng: 21.017521},
+            zoom: 14
+        });
     return (
         <>
-        <section className="address">
+        <section className="address" id="address">
             <h3>your food is waiting for you!</h3>
             <div ref={ref} className="ref"> </div>
             <div className="info-wrapper">
@@ -26,7 +26,7 @@ const { ref } = useGoogleMaps(
                 <div>
                     <h4>We Are Open</h4>
                     <p>
-                        Monday - Friday: 10:00 - 20:00
+                        Monday - Friday: 11:00 - 20:00
                         <br/>
                         Saturday - Sunday: 11:00 - 18:00
                     </p>
