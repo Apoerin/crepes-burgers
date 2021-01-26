@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/crepes-burgers/static/css/main.bce6ad71.chunk.css",
-    "main.js": "/crepes-burgers/static/js/main.c12275d5.chunk.js",
-    "main.js.map": "/crepes-burgers/static/js/main.c12275d5.chunk.js.map",
-    "runtime-main.js": "/crepes-burgers/static/js/runtime-main.91aa594c.js",
-    "runtime-main.js.map": "/crepes-burgers/static/js/runtime-main.91aa594c.js.map",
+    "main.css": "/crepes-burgers/static/css/main.68b32a7f.chunk.css",
+    "main.js": "/crepes-burgers/static/js/main.22f89a01.chunk.js",
+    "main.js.map": "/crepes-burgers/static/js/main.22f89a01.chunk.js.map",
+    "runtime-main.js": "/crepes-burgers/static/js/runtime-main.bf9b0de2.js",
+    "runtime-main.js.map": "/crepes-burgers/static/js/runtime-main.bf9b0de2.js.map",
     "static/css/2.a4959a5f.chunk.css": "/crepes-burgers/static/css/2.a4959a5f.chunk.css",
-    "static/js/2.f3d3aea3.chunk.js": "/crepes-burgers/static/js/2.f3d3aea3.chunk.js",
-    "static/js/2.f3d3aea3.chunk.js.map": "/crepes-burgers/static/js/2.f3d3aea3.chunk.js.map",
-    "static/js/3.af28dec2.chunk.js": "/crepes-burgers/static/js/3.af28dec2.chunk.js",
-    "static/js/3.af28dec2.chunk.js.map": "/crepes-burgers/static/js/3.af28dec2.chunk.js.map",
+    "static/js/2.caf931a1.chunk.js": "/crepes-burgers/static/js/2.caf931a1.chunk.js",
+    "static/js/2.caf931a1.chunk.js.map": "/crepes-burgers/static/js/2.caf931a1.chunk.js.map",
+    "static/js/3.9fd4cd1a.chunk.js": "/crepes-burgers/static/js/3.9fd4cd1a.chunk.js",
+    "static/js/3.9fd4cd1a.chunk.js.map": "/crepes-burgers/static/js/3.9fd4cd1a.chunk.js.map",
     "index.html": "/crepes-burgers/index.html",
     "static/css/2.a4959a5f.chunk.css.map": "/crepes-burgers/static/css/2.a4959a5f.chunk.css.map",
-    "static/css/main.bce6ad71.chunk.css.map": "/crepes-burgers/static/css/main.bce6ad71.chunk.css.map",
-    "static/js/2.f3d3aea3.chunk.js.LICENSE.txt": "/crepes-burgers/static/js/2.f3d3aea3.chunk.js.LICENSE.txt",
+    "static/css/main.68b32a7f.chunk.css.map": "/crepes-burgers/static/css/main.68b32a7f.chunk.css.map",
+    "static/js/2.caf931a1.chunk.js.LICENSE.txt": "/crepes-burgers/static/js/2.caf931a1.chunk.js.LICENSE.txt",
     "static/media/bacon-crepe.e01bd5a8.jpg": "/crepes-burgers/static/media/bacon-crepe.e01bd5a8.jpg",
     "static/media/burger_parallax.f925b907.jpg": "/crepes-burgers/static/media/burger_parallax.f925b907.jpg",
     "static/media/burger_preview.86e3e069.jpg": "/crepes-burgers/static/media/burger_preview.86e3e069.jpg",
@@ -40,10 +40,10 @@
     "static/media/vege-salad.c49fbcd4.jpg": "/crepes-burgers/static/media/vege-salad.c49fbcd4.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.91aa594c.js",
+    "static/js/runtime-main.bf9b0de2.js",
     "static/css/2.a4959a5f.chunk.css",
-    "static/js/2.f3d3aea3.chunk.js",
-    "static/css/main.bce6ad71.chunk.css",
-    "static/js/main.c12275d5.chunk.js"
+    "static/js/2.caf931a1.chunk.js",
+    "static/css/main.68b32a7f.chunk.css",
+    "static/js/main.22f89a01.chunk.js"
   ]
 }
