@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+import { Link } from "react-scroll";
+
 import logo from '../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -6,49 +9,36 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fas);
 
+
 const Header = () =>  {
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
+    //const closeMobileMenu = () => setClick(false);
+
     return (
         <header>
-        <nav className="header-nav">
-            <a href="/home"><img src={logo} alt="Crepes&Burgers"/></a>
-            <ul>
-                <li>
-                    <a href="/home">Home</a>
-                </li>
-                <li>
-                    <a href="/home">About</a>
-                </li>
-                <li>
-                    <a href="/home">Where&When</a>
-                </li>
-                <li>
-                    <a href="/menu">Menu</a>
-                </li>
-            </ul>
-        </nav>
-            <div className="nav-mobile">
-                <div className="logo">
-                    <a href="/home"><img src={logo} alt="Crepes&Burgers"/></a>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="/home">Home</a>
+            <div className="header-container">
+                        <a href="/home"><img src={logo} alt="Crepes&Burgers" /></a>
+                    <ul className={click ? "nav-options active" : "nav-options"}>
+                        <li className="option">
+                            <Link activeClass="active" to="home" spy={true} smooth={true} duration={1000}>Home</Link>
                         </li>
-                        <li>
-                            <a href="/about">About</a>
+                        <li className="option">
+                            <Link activeClass="active" to="about" spy={true} smooth={true} duration={1000}>About</Link>
                         </li>
-                        <li>
-                            <a href="/address">Where&When</a>
+                        <li className="option">
+                            <Link activeClass="active" to="address" spy={true} smooth={true} duration={1000}>Where&When</Link>
                         </li>
-                        <li>
+                        <li className="option">
                             <a href="/menu">Menu</a>
                         </li>
                     </ul>
-                </div>
-                <div className="mobile-menu">
-                    <FontAwesomeIcon className="open-menu" icon={["fas", "bars"]}/>
-                    <FontAwesomeIcon className="close-menu" icon={["fas", "times"]}/>
+                <div className="mobile-menu-icons" onClick={handleClick}>
+                    {click ? (
+                        <FontAwesomeIcon className="close-menu" icon={["fas", "times"]} />
+                    ) : (
+                        <FontAwesomeIcon className="open-menu" icon={["fas", "bars"]} />
+                        )}
                 </div>
             </div>
         </header>

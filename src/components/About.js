@@ -23,7 +23,7 @@ const About = () => {
 
     return (
         <>
-            <section className="intro">
+            <section className="intro" id="home">
                 <img
                     src={burger_parallax}
                     alt="burger"

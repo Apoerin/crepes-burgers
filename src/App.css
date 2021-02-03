@@ -1,65 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import "react-alice-carousel/lib/alice-carousel.css";
 
-html {
-    scroll-behavior: smooth;
-}
-
 /*Header*/
 
 header {
     width: 100%;
+    display: flex;
     background-color: #270f0ff2;
     position: fixed;
     z-index: 2;
 }
 
-.header-nav {
+.header-container {
     width: 80%;
-    height: 100px;
     display: flex;
-    justify-content: center;
     margin: auto;
 }
 
-.header-nav img {
+.header-container img {
     width: 100px;
 }
 
-.header-nav ul {
+header ul {
+    width: 80%;
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
     list-style: none;
     margin: auto;
 }
 
-.header-nav li {
+header li {
     padding: 0 0 0 110px;
 }
 
-.header-nav a {
+header a {
     text-decoration: none;
+    height: 100px;
     color: #cf7f57;
     font-size: 26px;
+    cursor: pointer;
 }
 
-.header-nav a:hover {
+header a:hover {
     text-decoration: underline;
     color: #cf7f57;
 }
 
-.nav-mobile {
+.mobile-menu-icons {
     display: none;
-}
-
-.nav-mobile ul {
-    list-style: none;
-}
-
-.nav-mobile a {
-    text-decoration: none;
-    color: #cf7f57;
-    font-size: 22px;
 }
 
 
@@ -90,8 +78,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 110%;
+    max-width: 100%;
+    height: 100%;
     object-fit: cover;
+    background-size: contain;
     z-index: -1;
 }
 
@@ -101,6 +91,7 @@ header {
     background-color: #fffbf9;
     display: flex;
     flex-direction: column;
+    padding: 50px 0;
 }
 
 .details h3 {
@@ -167,7 +158,8 @@ header {
 /*Address*/
 
 .address {
-    height: 818px;
+    height: auto;
+    padding: 50px 0;
 }
 
 .ref {
@@ -211,12 +203,11 @@ header {
 
 
 
-
 /*Menu*/
 
 .tabs-wrapper {
     height: auto;
-    padding: 100px 0;
+    padding: 30px 0;
 }
 
 .tabs {
@@ -224,6 +215,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
+    padding: 0;
 }
 
 .tab-item {
@@ -245,6 +237,11 @@ header {
 
 .react-tabs__tab--selected {
     background-color: #270f0ff2;
+}
+
+.burgers, .lunch, .crepes {
+    width: 80%;
+    margin: auto;
 }
 
 .lunch {
@@ -276,8 +273,13 @@ header {
     box-shadow: 1px 5px 22px -4px #000000;
 }
 
+.lunch div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .lunch img {
-    width: 50%;
+    width: 40%;
     height: auto;
     object-fit: cover;
     border: 2px solid #8281815e;
@@ -292,7 +294,7 @@ header {
     text-shadow: 1px 2px #181717;
 }
 
-.burgers span, .crepes span {
+.burgers span, .lunch span, .crepes span {
     color: #A95534;
     font-size: 30px;
     background-color:#f3cdbbab;

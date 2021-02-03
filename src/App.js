@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+//Router isn't working for some reason, and for now Menu gonna stay at Home page for gh-pages
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,15 +12,15 @@ import './Responsive.css';
 
 function App() {
   return (
-      <>
-      <Header />
-      <Router>
-        <Switch>
-        <Route exact path="/home" component={Home} />
-        <Route path="/menu" component={Menu} />
-        </Switch>
+    <>
+    <Header />
+    <Router>
+      <Switch>
+      <Route exact path="/home" component={Home} />
+      <Route path="/menu" component={Menu} />
+      </Switch>
       </Router>
-      <Footer />
+    <Footer />
       </>
   );
 }
