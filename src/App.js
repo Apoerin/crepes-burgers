@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Router isn't working for some reason, and for now Menu gonna stay at Home page for gh-pages
 
 import Header from "./components/Header";
