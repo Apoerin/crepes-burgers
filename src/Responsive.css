@@ -216,10 +216,8 @@
     }
     .burgers img, .crepes img {
         width: 70%;
-        height: 400px;
     }
     .burgers p, .crepes p {
-        width: 100%;
         font-size: 24px;
     }
     .lunch div {

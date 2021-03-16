@@ -3,17 +3,24 @@ import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import { burgers } from "./Burgers";
-import { crepes } from "./Crepes";
+import { burgers } from "./constants/burgers";
+import { crepes } from "./constants/crepes";
 
 import sweetLunch from "../images/sweet-lunch.jpg";
 import sweetCrepes from "../images/sweet-crepes.jpg";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
+
 //Menu of burgers, crepes, lunch of the day. Switch by clicking on tab
 
 const Menu = () => {
-  
+
   return (
+    <>
       <Tabs className="tabs-wrapper" id="menu">
       <TabList className="tabs">
         <Tab className="tab-item">Burgers</Tab>
@@ -29,6 +36,7 @@ const Menu = () => {
             <span>{burger.price}</span>
             <img src={burger.image} alt={burger.title} />
             <p>{burger.description}</p>
+            <button type="submit">Add to cart</button>
             </li>
             ))}
           </ul>
@@ -44,6 +52,7 @@ const Menu = () => {
             <br />
             For drink - one of our homemade lemonades - Melon, Orange or Lemon-Mint. Or a Frozen Coffee!
           </p>
+          <button type="submit">Add to cart</button>
           <div>
           <img src={sweetLunch} alt="Sweet crepe lunch" />
           <img src={sweetCrepes} alt="Sweet crepes lunch" />
@@ -59,12 +68,15 @@ const Menu = () => {
               <span>{crepe.price}</span>
               <img src={crepe.image} alt={crepe.title} />
               <p>{crepe.description}</p>
+              <button type="submit">Add to cart</button>
             </li>
             ))}
           </ul>
         </div>
       </TabPanel>
     </Tabs>
+    <FontAwesomeIcon className="cart" icon={["fas", "shopping-cart"]} />
+  </>
   )
 }
 
