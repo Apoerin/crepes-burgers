@@ -34,12 +34,14 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .header-container {
         width: 80%;
-        display: flex;
-        justify-content: space-between;
+        display: block;
         margin: auto;
     }
     .mobile-menu-icons {
         display: block;
+        position: absolute;
+        top: -5px;
+        right: 70px
     }
     header img {
         width: 120px;
@@ -49,7 +51,6 @@
     }
     .nav-options.active {
         display: block;
-        padding: 100px 0 0 0;
         transition: all 0.5s ease;
     }
     .option {
@@ -123,19 +124,20 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .header-container {
         width: 80%;
-        display: flex;
-        justify-content: space-between;
+        display: block;
         margin: auto;
     }
     .mobile-menu-icons {
         display: block;
+        position: absolute;
+        top: -5px;
+        right: 70px;
     }
     .nav-options {
         display: none;
     }
     .nav-options.active {
         display: block;
-        padding-top: 100px;
         transition: all 0.5s ease;
     }
     .option {
