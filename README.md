@@ -1,10 +1,3 @@
-Issues, not fixed yet:
-1. React Router from Home Page to Menu page isn't working woth gh-pages. Home page and Manu page are staying for now on same page.
-2. Link on Logo and Home element from a header menu list aren't working either - originally, they should lead to Home page from Menu page.
-3. Cart Element to be able order food isn't finished.
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
