@@ -12,12 +12,12 @@ export default function Header() {
 
     return (
         <header>
-            <div className="header-container">
+            <nav className="nav-container">
                 <NavLink as={NavLink} to="/"><img src={logo} alt="Crepes&Burgers" /></NavLink>
                 <ul className={click ? "nav-options active" : "nav-options"}>
                     <li className="option">
                     <NavLink as={NavLink} to="/">Home</NavLink>
-                    <Link activeClass="active" to="intro" spy={true} smooth={true} duration={1000}>Home</Link>
+                    {/*<Link activeClass="active" to="intro" spy={true} smooth={true} duration={1000}></Link>*/}
                     </li>
                     <li className="option">
                         <Link activeClass="active" to="about" spy={true} smooth={true} duration={1000}>About</Link>
@@ -32,7 +32,7 @@ export default function Header() {
                 <div className="mobile-menu-icons" onClick={handleClick}>
                     {click ? (<FaTimes className="close-menu" />) : (<FaBars className="open-menu" />)}
                 </div>
-            </div>
+            </nav>
         </header>
     )
 }

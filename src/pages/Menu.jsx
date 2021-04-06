@@ -130,7 +130,9 @@ export default function Menu() {
       </Tabs>
       <div className="cart-icon__container">
         <span className="cart-items__quantity">{getCartCount()}</span>
-        <FaShoppingCart className="cart-icon" onClick={() => setVisible(!visible)} />
+        <button className="btn__cart">
+          <FaShoppingCart className="cart-icon" onClick={() => setVisible(!visible)} />
+        </button>
       </div>
       {visible && <div className="cart__container">
         <div className="cart-items__container">

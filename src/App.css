@@ -18,13 +18,13 @@ header {
     z-index: 2;
 }
 
-.header-container {
+.nav-container {
     width: 80%;
     display: flex;
     margin: auto;
 }
 
-.header-container img {
+.nav-container img {
     width: 100px;
 }
 
@@ -132,12 +132,12 @@ header a:hover {
     padding: 0 0 0 100px;
 }
 
-.reverse-wrapper h4 {
+/*.reverse-wrapper h4 {
     padding-left: 150px;
-}
+}*/
 
 .reverse-wrapper p {
-    padding-left: 200px;
+    padding: 0;
 }
 
 .preview {
@@ -418,6 +418,11 @@ header a:hover {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+}
+
+.btn__cart {
+    background-color: transparent;
+    border: none;
 }
 
 .cart-item__container h4 {
