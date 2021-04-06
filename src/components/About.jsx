@@ -5,7 +5,7 @@ import burger_preview from '../images/burger_preview.jpg';
 import salmon_crepe from '../images/salmon_crepe.jpg';
 import for_seasonal from '../images/for_seasonal.jpg';
 
-const About = React.forwardRef((props, { introRef, aboutRef }) => {
+const About = React.forwardRef((props, { aboutRef }) => {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const About = React.forwardRef((props, { introRef, aboutRef }) => {
 
   return (
     <>
-      <section className="intro" id="intro" ref={introRef}>
+      <section className="intro" id="intro">
         <img
           src={burger_parallax}
           alt="burger"
