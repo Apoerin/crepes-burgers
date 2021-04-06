@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import "react-alice-carousel/lib/alice-carousel.css";
 
+body {
+    margin: 0;
+    font-family:'Architects Daughter';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
 /*Header*/
 
 header {
@@ -66,7 +73,7 @@ header a:hover {
 }
 
 .headline {
-    font-size: 130px;
+    font-size: 110px;
     text-align: center;
     text-transform: capitalize;
     color: #ffffff;
@@ -102,7 +109,7 @@ header a:hover {
 }
 
 .details .wrapper, .details .reverse-wrapper {
-    width: 80%;
+    width: 60%;
     display: flex;
     margin: auto;
 }
@@ -125,14 +132,22 @@ header a:hover {
     padding: 0 0 0 100px;
 }
 
-.preview{
-    width: 350px;
+.reverse-wrapper h4 {
+    padding-left: 150px;
+}
+
+.reverse-wrapper p {
+    padding-left: 200px;
+}
+
+.preview {
+    width: 330px;
     height: auto;
     border-radius: 50%;
     border: 2px solid #8281815e;
-    margin: 20px auto;
     -webkit-box-shadow: 1px 5px 22px -4px #000000;
     box-shadow: 1px 5px 22px -4px #000000;
+    margin: 0 auto;
 }
 
 /*Gallery*/
@@ -142,10 +157,10 @@ header a:hover {
 }
 
 .alice-carousel__wrapper {
-    padding: 100px 0;
+    padding-top: 50px;
 }
 
-.item  img{
+.item  img {
     width: 95%;
     height: auto;
     display: block;
@@ -158,8 +173,8 @@ header a:hover {
 /*Address*/
 
 .address {
-    height: auto;
-    padding: 50px 0;
+    height: 1000px;
+    padding-top: 70px;
 }
 
 .ref {
@@ -236,7 +251,8 @@ header a:hover {
 }
 
 .react-tabs__tab--selected {
-    background-color: #270f0ff2;
+    color: #cf7f57!important;
+    background-color: #270f0ff2!important;
 }
 
 .burgers, .lunch, .crepes {
@@ -263,7 +279,7 @@ header a:hover {
 }
 
 .burgers img, .crepes img {
-    width: 50%;
+    width: 45%;
     height: auto;
     object-fit: cover;
     border: 2px solid #8281815e;
@@ -279,7 +295,7 @@ header a:hover {
 }
 
 .lunch img {
-    width: 40%;
+    width: 35%;
     height: auto;
     object-fit: cover;
     border: 2px solid #8281815e;
@@ -327,13 +343,238 @@ header a:hover {
     border-radius: 0;
     margin-top: 10px;
     padding: 15px 20px;
-    list-style: none;
 } 
 
 .burgers button:hover, .lunch button:hover, .crepes button:hover {
     background-color: #270f0ff2;
     cursor: pointer;
 }
+
+.cart-icon__container {
+    position: fixed;
+    right: 50px;
+    bottom: 110px;
+    z-index: 25;
+}
+
+.cart-icon {
+    color: #270f0ff2;
+    background-color: #f3cdbbab;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    transform: scale(1);
+    animation: pulse 2s infinite; 
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(243, 205, 187, 0.67);
+    } 
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 177, 66, 0);
+    } 
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 177, 66, 0);
+    }
+}
+
+.cart-items__quantity {
+    color:#270f0ff2;
+    background-color:#cf7f57;
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    border-radius: 50%;
+    padding: 4px 10px;
+    z-index: 10;
+}
+
+.cart__container {
+    background-color: #fffbf9;
+    width: 55%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    right: 0;
+    top: 0;
+    border: 1px solid #8281815e;
+    -webkit-box-shadow: 1px 5px 22px -4px #000000;
+    box-shadow: 1px 5px 22px -4px #000000;
+    z-index: 20;
+    overflow-y: auto;
+}
+
+.cart-item__container {
+    height: 90px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.cart-item__container h4 {
+    margin: auto 0;
+}
+
+.cart-item__image {
+    width: 10%;
+    height: fit-content;
+    margin: auto 0;
+    border-radius: 50%;
+    border: 2px solid #8281815e;
+    -webkit-box-shadow: 1px 5px 22px -4px #000000;
+    box-shadow: 1px 5px 22px -4px #000000;
+}
+
+.cart-item__title {
+    width: 180px;
+    color: #A95534;
+    font-size: 26px;
+    text-shadow: 1px 2px #181717;
+}
+
+.cart-item__price {
+    color: #773a23;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.cart-items__container {
+    width: 50%;
+    margin: 20px auto 0;
+}
+
+.count-value {
+    color: #773a23;
+    font-weight: bold;
+    font-size: 28px;
+    padding: 0 10px;
+    position: relative;
+    top: -10px;
+}
+
+.btn-count__decrease {
+    border: none;
+    background-color: #fffbf9;
+    font-size: 60px;
+    color: #270f0ff2;
+    cursor: pointer;
+}
+
+.btn-count__increase {
+    border: none;
+    background-color: #fffbf9;
+    font-size: 45px;
+    color: #270f0ff2;
+    cursor: pointer;
+}
+
+.icon__remove {
+    color: #270f0ff2;
+    font-size: 30px;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.cart__total {
+    color: #A95534;
+    font-size: 36px;
+    text-shadow: 1px 2px #181717;
+    margin: 10px auto;
+}
+
+.btn__clear {
+    font-family: "Architects Daughter";
+    color: #cf7f57;
+    font-size: 20px;
+    text-shadow: 1px 1px #181717;
+    background-color: #f3cdbbab;
+    border: 2px solid #270f0fc2;
+    border-radius: 0;
+    margin: 30px auto;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+
+
+/*Form*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-wrapper {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.form-wrapper h2 {
+    color: #A95534;
+    font-size: 36px;
+    text-shadow: 1px 2px #181717;
+    text-align: center;
+}
+
+fieldset {
+    margin: 0 auto;
+    border-color: #a95534;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+input {
+    border: 1px solid #a95534;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.home-address input {
+    margin-right: 5px;
+}
+
+form p {
+    font-size: 20px;
+    color: #773a23;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+input[type=radio] {
+    font-size: 20px;
+    color: #773a23;
+    font-weight: bold;
+}
+
+.submit-order {
+    font-family: "Architects Daughter";
+    color: #cf7f57;
+    font-size: 20px;
+    text-shadow: 1px 1px #181717;
+    background-color: #f3cdbbab;
+    border: 2px solid #270f0fc2;
+    border-radius: 0;
+    padding: 10px 20px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+
+
+
 
 /*Footer*/
 

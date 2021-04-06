@@ -1,23 +1,19 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
-library.add(fab)
-
-const Footer = () => {
+export default function Footer() {
     return (
         <footer>
             <div className="socials">
                 <a href="https://www.facebook.com/">
-                    <FontAwesomeIcon className="icon" icon={["fab", "facebook"]}/>
+                    <FaFacebook className="icon" />
                 </a>
                 <a href="https://www.instagram.com/">
-                    <FontAwesomeIcon className="icon" icon={["fab", "instagram"]}/>
+                    <FaInstagram className="icon" />
                 </a>
                 <a href="https://twitter.com/?lang=en">
-                    <FontAwesomeIcon className="icon" icon={["fab", "twitter"]}/>
+                    <FaTwitter className="icon" />
                 </a>
             </div>
             <div>
@@ -26,5 +22,3 @@ const Footer = () => {
         </footer>
     );
 }
-
-export default Footer;

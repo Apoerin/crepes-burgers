@@ -29,7 +29,7 @@ const items = [
 
 ];
 
-const Gallery = () => {
+export default function Gallery() {
     return (
         <AliceCarousel
             autoPlay
@@ -42,5 +42,3 @@ const Gallery = () => {
         />
     )
 }
-
-export default Gallery;

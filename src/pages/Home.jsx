@@ -1,8 +1,8 @@
 import React from "react";
 
-import { About, Gallery, Address } from './index';
+import { About, Gallery, Address } from '../components/index';
 
-const Home = () => {
+export default function Home() {
   return (
       <>
         <About/>
@@ -11,5 +11,3 @@ const Home = () => {
       </>
   );
 }
-
-export default Home;

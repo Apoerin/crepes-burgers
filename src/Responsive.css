@@ -5,12 +5,18 @@
     .details .wrapper {
         padding: 20px 0;
     }
+    .details .wrapper, .details .reverse-wrapper {
+        width: 80%;
+    }
     .details-text p {
         width: 85%;
         padding: 0 0 0 50px;
     }
     .address .info-wrapper {
         width: 85%;
+    }
+    .tabs p {
+        width: 90%;
     }
     .burgers li, .crepes li {
         flex: 0 0 33.333333%;
@@ -28,6 +34,12 @@
     }
     .lunch img {
         width: 45%;
+    }
+    .cart__container {
+        display: block;
+    }
+    .cart-items__container, .form-wrapper {
+        width: 90%;
     }
 }
 
@@ -83,14 +95,19 @@
     .details .wrapper {
         width: 85%;
         display: block;
+        text-align: center;
         padding: 20px 0;
     }
     .reverse-wrapper {
         display: flex;
         width: 85%;
         margin: auto;
+        text-align: center;
         flex-direction: column-reverse;
         padding: 20px 0;
+    }
+    .reverse-wrapper h4, .reverse-wrapper p {
+        padding: 0;
     }
     .details-text p {
         width: 100%;
@@ -114,11 +131,24 @@
     .burgers span, .crepes span {
         padding: 20px;
     }
+    .burgers p, .crepes p {
+        width: 100%;
+    }
     .lunch div {
         display: grid;
     }
     .lunch img {
         width: 80%;
+    }
+    .cart-icon__container {
+        bottom: 50px;
+    }
+    .cart__container {
+        width: 70%;
+        display: block;
+    }
+    .cart-items__container, .form-wrapper {
+        width: 90%;
     }
 }
 
@@ -170,16 +200,23 @@
     }
     .preview {
         width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .reverse-wrapper h4, .reverse-wrapper p {
+        padding: 0;
     }
     .details .wrapper {
         width: 85%;
         display: block;
+        text-align: center;
         padding: 20px 0;
     }
     .reverse-wrapper {
-        width: 85%;
+        width: 85%!important;
         margin: auto;
         display: flex;
+        text-align: center;
         flex-direction: column-reverse;
         padding: 20px 0;
     }
@@ -197,12 +234,15 @@
     .address .info-wrapper {
         width: 90%;
         height: auto;
-        top: -580px;
+        top: -630px;
         display: block;
     }
     .address .info-wrapper p {
         font-size: 22px;
         text-align: center;
+    }
+    .tabs-wrapper {
+        padding-top: 70px;
     }
     .tabs {
         display: block;
@@ -223,12 +263,30 @@
     }
     .burgers p, .crepes p {
         font-size: 24px;
+        width: 100%;
     }
     .lunch div {
         display: grid;
     }
     .lunch img {
         width: 80%;
+    }
+    .cart-icon__container {
+        right: 30px;
+        bottom: 30px;
+    }
+    .cart__container {
+        width: 100%;
+        display: block;
+    }
+    .cart-items__container, .form-wrapper {
+        width: 90%;
+    }
+    .cart-item__title {
+        width: 100px;
+    }
+    .cart-item__image, .cart-item__price {
+        display: none;
     }
     footer {
         display: block;
