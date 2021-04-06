@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-// import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 import logo from '../images/logo.png';
@@ -8,7 +7,6 @@ import logo from '../images/logo.png';
 export default function Header() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  // const closeMobileMenu = () => setClick(false);
 
   return (
     <header>

@@ -63,10 +63,7 @@ module.exports = {
     'react/prop-types': 0,
     'react/no-unstable-nested-components': 1,
     'react/boolean-prop-naming': 1,
-    'react/jsx-filename-extension': [
-      1,
-      { extensions: ['.js', '.jsx', '.tsx'] },
-    ],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 
     'sonarjs/cognitive-complexity': 0,
     'sonarjs/no-duplicate-string': 'warn',
@@ -79,8 +76,6 @@ module.exports = {
       {
         js: 'never',
         jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
       },
     ],
     'import/order': [

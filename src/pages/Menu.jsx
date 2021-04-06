@@ -63,6 +63,18 @@ export default function Menu() {
   const getCartCount = () =>
     cart.reduce((total, product) => total + product.count, 0);
 
+  const renderProduct = (product) => (
+    <Product key={product.id} product={product} addToCart={addToCart} />
+  );
+
+  const burgerProducts = products
+    .filter((product) => product.category === 'burger')
+    .map(renderProduct);
+
+  const crepeProducts = products
+    .filter((product) => product.category === 'crepe')
+    .map(renderProduct);
+
   return (
     <>
       <Tabs className="tabs-wrapper" id="menu">
@@ -73,17 +85,7 @@ export default function Menu() {
         </TabList>
         <TabPanel>
           <div className="burgers">
-            <ul>
-              {products
-                .filter((product) => product.category === 'burger')
-                .map((product) => (
-                  <Product
-                    key={product.id}
-                    product={product}
-                    addToCart={addToCart}
-                  />
-                ))}
-            </ul>
+            <ul>{burgerProducts}</ul>
           </div>
         </TabPanel>
         <TabPanel>
@@ -108,17 +110,7 @@ export default function Menu() {
         </TabPanel>
         <TabPanel>
           <div className="crepes">
-            <ul>
-              {products
-                .filter((product) => product.category === 'crepe')
-                .map((product) => (
-                  <Product
-                    key={product.id}
-                    product={product}
-                    addToCart={addToCart}
-                  />
-                ))}
-            </ul>
+            <ul>{crepeProducts}</ul>
           </div>
         </TabPanel>
       </Tabs>
