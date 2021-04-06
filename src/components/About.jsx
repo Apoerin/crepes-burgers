@@ -5,71 +5,81 @@ import burger_preview from '../images/burger_preview.jpg';
 import salmon_crepe from '../images/salmon_crepe.jpg';
 import for_seasonal from '../images/for_seasonal.jpg';
 
-export default function About() {
-    const [offset, setOffset] = useState(0);
+const About = React.forwardRef((props, { introRef, aboutRef }) => {
+  const [offset, setOffset] = useState(0);
 
-    useEffect(() => {
-        function handleScroll() {
-            setOffset(window.pageYOffset);
-        };
+  useEffect(() => {
+    function handleScroll() {
+      setOffset(window.pageYOffset);
+    }
 
-        window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [offset]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [offset]);
 
-    return (
-        <>
-            <section className="intro" id="intro">
-                <img
-                    src={burger_parallax}
-                    alt="burger"
-                    className="parallax"
-                    style={{
-                        filter: `blur(1px)`,
-                        transform: `translateY(${offset * 0.5}px)`
-                    }}
-                />
-                <div className="text-wrapper">
-                    <h2 className="headline">this is your burger</h2>
-                </div>
-            </section>
-            <section className="details" id="about">
-                <h3>Enjoy every bite</h3>
-                <div className="wrapper">
-                    <div className="img-wrapper">
-                        <img src={burger_preview} className="preview" alt="burger" />
-                    </div>
-                    <div className="details-text">
-                        <h4>Juicy burgers with best local meat</h4>
-                        <p>The best meat in city! Our burgers are made with 100% bio beef, roasted on grill
-                        to let you enjoy a natural taste of fine meat. Also with rich bacon and high quality
-                            cheese to give you new experience.</p>
-                    </div>
-                </div>
-                <div className="reverse-wrapper">
-                    <div className="details-text">
-                        <h4>Fresh herbs, vegetables and fruits</h4>
-                        <p>We use only fresh veggies, fruits and herbs. We support small local businesses by buying
-                            their goods. And so, we have 100% Bio, eco grown ingredients for your health.</p>
-                    </div>
-                    <div className="img-wrapper">
-                        <img src={for_seasonal} className="preview" alt="herbs" />
-                    </div>
-                </div>
-                <div className="wrapper">
-                    <div className="img-wrapper">
-                        <img src={salmon_crepe} className="preview" alt="salmon-crepe" />
-                    </div>
-                    <div className="details-text">
-                        <h4>Tasty fish for our crepes</h4>
-                        <p>Rich in healthy fats, tasty salmon for our most likeable crepe! Alongside with creamy avocado it makes
-                            perfect duet to fulfill your need of freshness.</p>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
-}
+  return (
+    <>
+      <section className="intro" id="intro" ref={introRef}>
+        <img
+          src={burger_parallax}
+          alt="burger"
+          className="parallax"
+          style={{
+            filter: `blur(1px)`,
+            transform: `translateY(${offset * 0.5}px)`,
+          }}
+        />
+        <div className="text-wrapper">
+          <h2 className="headline">this is your burger</h2>
+        </div>
+      </section>
+      <section className="details" id="about" ref={aboutRef}>
+        <h3>Enjoy every bite</h3>
+        <div className="wrapper">
+          <div className="img-wrapper">
+            <img src={burger_preview} className="preview" alt="burger" />
+          </div>
+          <div className="details-text">
+            <h4>Juicy burgers with best local meat</h4>
+            <p>
+              The best meat in city! Our burgers are made with 100% bio beef,
+              roasted on grill to let you enjoy a natural taste of fine meat.
+              Also with rich bacon and high quality cheese to give you new
+              experience.
+            </p>
+          </div>
+        </div>
+        <div className="reverse-wrapper">
+          <div className="details-text">
+            <h4>Fresh herbs, vegetables and fruits</h4>
+            <p>
+              We use only fresh veggies, fruits and herbs. We support small
+              local businesses by buying their goods. And so, we have 100% Bio,
+              eco grown ingredients for your health.
+            </p>
+          </div>
+          <div className="img-wrapper">
+            <img src={for_seasonal} className="preview" alt="herbs" />
+          </div>
+        </div>
+        <div className="wrapper">
+          <div className="img-wrapper">
+            <img src={salmon_crepe} className="preview" alt="salmon-crepe" />
+          </div>
+          <div className="details-text">
+            <h4>Tasty fish for our crepes</h4>
+            <p>
+              Rich in healthy fats, tasty salmon for our most likeable crepe!
+              Alongside with creamy avocado it makes perfect duet to fulfill
+              your need of freshness.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+});
+export default About;

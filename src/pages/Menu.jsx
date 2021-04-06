@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { FaShoppingCart } from 'react-icons/fa';
 
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+import products from '../components/constants/products';
+import Product from '../components/Product';
+import Cart from '../components/Cart';
+import Form from '../components/Form';
+import sweetLunch from '../images/sweet-lunch.jpg';
+import sweetCrepes from '../images/sweet-crepes.jpg';
 
-import products from "../components/constants/products";
-import Product from "../components/Product";
-import Cart from "../components/Cart";
-import Form from "../components/Form";
-
-import sweetLunch from "../images/sweet-lunch.jpg";
-import sweetCrepes from "../images/sweet-crepes.jpg";
-import { FaShoppingCart } from "react-icons/fa";
+import 'react-tabs/style/react-tabs.css';
 
 export default function Menu() {
   const [cart, setCart] = useState([]);
@@ -58,16 +57,11 @@ export default function Menu() {
     setCart(cartCopy);
   };
 
-  const getCartTotal = () => {
-    return cart.reduce(
-      (total, product) => total + product.price * product.count,
-      0
-    );
-  };
+  const getCartTotal = () =>
+    cart.reduce((total, product) => total + product.price * product.count, 0);
 
-  const getCartCount = () => {
-    return cart.reduce((total, product) => total + product.count, 0);
-  };
+  const getCartCount = () =>
+    cart.reduce((total, product) => total + product.count, 0);
 
   return (
     <>
@@ -81,7 +75,7 @@ export default function Menu() {
           <div className="burgers">
             <ul>
               {products
-                .filter((product) => product.category === "burger")
+                .filter((product) => product.category === 'burger')
                 .map((product) => (
                   <Product
                     key={product.id}
@@ -116,7 +110,7 @@ export default function Menu() {
           <div className="crepes">
             <ul>
               {products
-                .filter((product) => product.category === "crepe")
+                .filter((product) => product.category === 'crepe')
                 .map((product) => (
                   <Product
                     key={product.id}
@@ -130,28 +124,38 @@ export default function Menu() {
       </Tabs>
       <div className="cart-icon__container">
         <span className="cart-items__quantity">{getCartCount()}</span>
-        <button className="btn__cart">
-          <FaShoppingCart className="cart-icon" onClick={() => setVisible(!visible)} />
+        <button className="btn__cart" type="button">
+          <FaShoppingCart
+            className="cart-icon"
+            onClick={() => setVisible(!visible)}
+          />
         </button>
       </div>
-      {visible && <div className="cart__container">
-        <div className="cart-items__container">
-          {cart.map((el) => (
-            <Cart
-              key={el.id}
-              product={el}
-              count={el.count}
-              removeFromCart={removeFromCart}
-              incrementCount={incrementCount}
-              decrementCount={decrementCount}
-            />
-          ))}
-          <h4 className="cart__total">Total Price: {getCartTotal()}$</h4>
-          <button className="btn__clear" onClick={() => setCart([])}>Clear cart</button>
+      {visible && (
+        <div className="cart__container">
+          <div className="cart-items__container">
+            {cart.map((el) => (
+              <Cart
+                key={el.id}
+                product={el}
+                count={el.count}
+                removeFromCart={removeFromCart}
+                incrementCount={incrementCount}
+                decrementCount={decrementCount}
+              />
+            ))}
+            <h4 className="cart__total">Total Price: {getCartTotal()}$</h4>
+            <button
+              type="button"
+              className="btn__clear"
+              onClick={() => setCart([])}
+            >
+              Clear cart
+            </button>
+          </div>
+          <Form />
         </div>
-        <Form />
-      </div>
-      }
+      )}
     </>
   );
-};
+}

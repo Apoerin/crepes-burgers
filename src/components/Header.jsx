@@ -1,38 +1,44 @@
-import React, {useState} from 'react';
-import { NavLink } from 'react-router-dom';
-import { Link } from "react-scroll";
-
-import logo from '../images/logo.png';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+// import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-export default function Header() {
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-    //const closeMobileMenu = () => setClick(false);
+import logo from '../images/logo.png';
 
-    return (
-        <header>
-            <nav className="nav-container">
-                <NavLink as={NavLink} to="/"><img src={logo} alt="Crepes&Burgers" /></NavLink>
-                <ul className={click ? "nav-options active" : "nav-options"}>
-                    <li className="option">
-                    <NavLink as={NavLink} to="/">Home</NavLink>
-                    {/*<Link activeClass="active" to="intro" spy={true} smooth={true} duration={1000}></Link>*/}
-                    </li>
-                    <li className="option">
-                        <Link activeClass="active" to="about" spy={true} smooth={true} duration={1000}>About</Link>
-                    </li>
-                    <li className="option">
-                        <Link activeClass="active" to="address" spy={true} smooth={true} duration={1000}>Where&When</Link>
-                    </li>
-                    <li className="option">
-                    <NavLink as={NavLink} to="/menu">Menu</NavLink>
-                    </li>
-                </ul>
-                <div className="mobile-menu-icons" onClick={handleClick}>
-                    {click ? (<FaTimes className="close-menu" />) : (<FaBars className="open-menu" />)}
-                </div>
-            </nav>
-        </header>
-    )
+export default function Header() {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  // const closeMobileMenu = () => setClick(false);
+
+  return (
+    <header>
+      <nav className="nav-container">
+        <Link to="/">
+          <img src={logo} alt="Crepes&Burgers" />
+        </Link>
+        <ul className={click ? 'nav-options active' : 'nav-options'}>
+          <li className="option">
+            <Link to="/">Home</Link>
+            {/* <Link activeClass="active" to="intro" spy={true} smooth={true} duration={1000}></Link> */}
+          </li>
+          <li className="option">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="option">
+            <Link to="/address">Where&When</Link>
+          </li>
+          <li className="option">
+            <Link to="/menu">Menu</Link>
+          </li>
+        </ul>
+        <div className="mobile-menu-icons" onClick={handleClick} role="button">
+          {click ? (
+            <FaTimes className="close-menu" />
+          ) : (
+            <FaBars className="open-menu" />
+          )}
+        </div>
+      </nav>
+    </header>
+  );
 }
