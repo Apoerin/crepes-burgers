@@ -257,7 +257,7 @@ header a:hover {
 
 .burgers, .lunch, .crepes {
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .lunch {
@@ -275,7 +275,7 @@ header a:hover {
 .burgers li, .crepes li {
     list-style: none;
     flex: 0 0 33.333333%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .burgers img, .crepes img {
@@ -330,7 +330,8 @@ header a:hover {
 } 
 
 .burgers p, .crepes p {
-    width: 70%;
+    width: 60%;
+    min-height: 160px;
 }
 
 .burgers button, .lunch button, .crepes button {
@@ -383,6 +384,8 @@ header a:hover {
 }
 
 .cart-items__quantity {
+    min-width: 14px;
+    text-align: center;
     color:#270f0ff2;
     background-color:#cf7f57;
     font-size: 20px;
@@ -450,6 +453,7 @@ header a:hover {
 }
 
 .count-value {
+    min-width: 40px;
     color: #773a23;
     font-weight: bold;
     font-size: 28px;

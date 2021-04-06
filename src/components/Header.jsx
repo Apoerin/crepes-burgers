@@ -16,7 +16,8 @@ export default function Header() {
                 <NavLink as={NavLink} to="/"><img src={logo} alt="Crepes&Burgers" /></NavLink>
                 <ul className={click ? "nav-options active" : "nav-options"}>
                     <li className="option">
-                        <Link activeClass="active" to="intro" spy={true} smooth={true} duration={1000}>Home</Link>
+                    <NavLink as={NavLink} to="/">Home</NavLink>
+                    <Link activeClass="active" to="intro" spy={true} smooth={true} duration={1000}>Home</Link>
                     </li>
                     <li className="option">
                         <Link activeClass="active" to="about" spy={true} smooth={true} duration={1000}>About</Link>

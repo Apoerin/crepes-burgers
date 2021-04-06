@@ -22,6 +22,9 @@
         flex: 0 0 33.333333%;
         margin: auto;
     }
+    .burgers p, .crepes p {
+        width: 80%;
+    }
     .burgers img, .crepes img {
         width: 90%;
     }
@@ -133,6 +136,7 @@
     }
     .burgers p, .crepes p {
         width: 100%;
+        min-height: 140px;
     }
     .lunch div {
         display: grid;
