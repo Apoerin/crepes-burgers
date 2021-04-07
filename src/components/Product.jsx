@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function Product({ product, addToCart }) {
   const { image, title, description, price } = product;
@@ -7,11 +7,11 @@ export default function Product({ product, addToCart }) {
     <li>
       <h4>{title}</h4>
       <span>{price}$</span>
-      <img src={image} alt={title}/>
+      <img src={image} alt={title} />
       <p>{description}</p>
-      <button type="submit" 
-      onClick={() => addToCart(product)}
-      >Add to cart</button>
+      <button type="submit" onClick={() => addToCart(product)}>
+        Add to cart
+      </button>
     </li>
   );
 }

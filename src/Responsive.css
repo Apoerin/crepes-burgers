@@ -55,8 +55,13 @@
     .mobile-menu-icons {
         display: block;
         position: absolute;
-        top: 30px;
-        right: 40px;
+        top: 40px;
+        right: 10%;
+    }
+    .mobile-menu-icons button {
+        background-color: transparent;
+        border: none;
+        outline: none;
     }
     header img {
         width: 120px;
@@ -165,7 +170,12 @@
         display: block;
         position: absolute;
         top: 40px;
-        right: 40px;
+        right: 10%;
+    }
+    .mobile-menu-icons button {
+        background-color: transparent;
+        border: none;
+        outline: none;
     }
     .nav-options {
         display: none;
@@ -246,15 +256,17 @@
     .tabs-wrapper {
         padding-top: 70px;
     }
+    .react-tabs__tab {
+        width: 80%;
+        margin: 10px auto;
+    }
     .tabs {
         display: block;
         text-align: center;
         padding: 0;
     }
     .tab-item {
-        width: 70%;
-        padding: 20px 10px;
-        margin: 10px auto;
+        width: 100%;
     }
     .burgers li, .crepes li {
         flex: 0 0 100%;

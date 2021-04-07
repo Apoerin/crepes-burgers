@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
 @import "react-alice-carousel/lib/alice-carousel.css";
 
 body {
@@ -126,6 +127,7 @@ header a:hover {
 }
 
 .details-text p {
+    font-family:'Raleway';
     color: #773a23;
     font-size: 24px;
     width: 75%;
@@ -211,8 +213,9 @@ header a:hover {
 }
 
 .address .info-wrapper p {
+    font-family:'Raleway';
     color: #ffffff;
-    font-size: 24px;
+    font-size: 22px;
     text-shadow: 1px 1px #181717;
 }
 
@@ -233,17 +236,27 @@ header a:hover {
     padding: 0;
 }
 
+.react-tabs__tab {
+    color: #cf7f57;
+    background-color: #f3cdbbab;
+    border: 2px solid #270f0fc2!important;
+    border-radius: 0;
+    padding: 0!important;
+}
+
 .tab-item {
     color: #cf7f57;
-    font-size: 24px;
+    font-family:'Architects Daughter';
+    font-size: 22px;
     font-weight: bold;
     text-shadow: 1px 1px #181717;
-    background-color: #f3cdbbab;
-    border: 2px solid #270f0fc2;
-    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
     margin: 0;
     padding: 20px 30px;
     list-style: none;
+    cursor: pointer;
 }
 
 .tab-item:hover {
@@ -253,6 +266,7 @@ header a:hover {
 .react-tabs__tab--selected {
     color: #cf7f57!important;
     background-color: #270f0ff2!important;
+    border-radius: 0!important;
 }
 
 .burgers, .lunch, .crepes {
@@ -321,10 +335,11 @@ header a:hover {
 }
 
 .burgers p, .lunch p, .crepes p {
+    font-family:'Raleway';
     text-align: center;
     font-size: 20px;
     color: #773a23;
-    font-weight: bold;
+    font-weight: 500;
     padding-top: 30px;
     margin: auto;
 } 
@@ -423,6 +438,7 @@ header a:hover {
 .btn__cart {
     background-color: transparent;
     border: none;
+    outline: none;
 }
 
 .cart-item__container h4 {
