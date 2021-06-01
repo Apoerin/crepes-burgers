@@ -5,7 +5,7 @@ This small app is for a restaurant.
 
 ## Demo
 
-Link: https:/apoerin.github.io/crepes-burgers/
+Link: https://apoerin.github.io/crepes-burgers/
 
   
 ## Functionality
